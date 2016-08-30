@@ -328,7 +328,7 @@ int8_t Plugin_014_si7021_startConv(uint8_t datatype, uint8_t resolution)
     if (data<0)   data = 0;
 
     // save value
-    si7021_humidity = (uint8_t) data;
+    si7021_humidity = (int16_t) data;
 
   // Temperature
   } else  if (datatype == SI7021_MEASURE_TEMP ||datatype == SI7021_MEASURE_TEMP_HM || datatype == SI7021_MEASURE_TEMP_HUM) {
